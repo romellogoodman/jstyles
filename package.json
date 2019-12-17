@@ -1,0 +1,95 @@
+{
+  "name": "jstyles",
+  "version": "0.0.0",
+  "description": "A css-in-js package.",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "prepublishOnly": "npm test && npm run build",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.0.8",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.18.2"
+  },
+  "source": "index.js",
+  "main": "dist/lib.js",
+  "module": "dist/lib.mjs",
+  "unpkg": "dist/lib.umd.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react",
+    "plugins": [
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "indent": 0,
+      "no-unused-vars": 1,
+      "object-curly-spacing": [
+        2,
+        "never"
+      ],
+      "operator-linebreak": 0,
+      "prettier/prettier": "error",
+      "quote-props": [
+        1,
+        "as-needed"
+      ],
+      "space-before-function-paren": 0
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true
+  },
+  "author": "Romello Goodman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romellogoodman/jstyles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romellogoodman/jstyles/issues"
+  },
+  "homepage": "https://github.com/romellogoodman/jstyles#readme",
+  "keywords": [
+    "css",
+    "css-in-js"
+  ]
+}
