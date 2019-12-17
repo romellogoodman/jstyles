@@ -1,6 +1,6 @@
 {
   "name": "jstyles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A css-in-js package.",
   "scripts": {
     "build": "microbundle",
@@ -24,7 +24,8 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "microbundle": "^0.11.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "react": "^16.12.0"
   },
   "source": "index.js",
   "main": "dist/lib.js",
@@ -91,5 +92,8 @@
   "keywords": [
     "css",
     "css-in-js"
-  ]
+  ],
+  "dependencies": {
+    "stylis": "^3.5.4"
+  }
 }

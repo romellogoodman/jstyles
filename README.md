@@ -11,7 +11,7 @@ const titleClass = css`
 
 // <h2 className={titleClass}>hello world</h2>
 
-const Div = styled`
+const Div = styled('div')`
   padding: '20px',
   font-size ${p => p.size || '20px'};
 `;
